@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>GIT college website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+<script src="https://kit.fontawesome.com/eb77bfa6eb.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block headerdiv %}
+<div class="text-box">
+    <h1>About Us</h1>
+</div>
+{% endblock %}
+
+{% block body %}
+
+<!-------- about us content  -------->
+
+<section class="about-us">
+
+    <div class="row">
+        <div class="about-col">
+            <h1>We are the BE Computer students</h1>
+            <p>Welcome to Placement Prediction, As a final year students, we've made a project focused on placement prediction for our college. This project aims to utilize data analysis and machine learning algorithms to forecast the likelihood of students securing chances to get placements based on various factors or features such as CGPA, Skills, and Internships, No. of backlogs.</p>
+            <a href="contact" class="hero-btn red-btn">EXPLORE NOW</a>
+        </div>
+        <div class="about-col">
+            <img src="{% static 'images/about us.jpg' %}">
+        </div>
+    </div>
+</section>
+
+<!-------- Footer-------->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Stay in touch to know more.</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by BE Comp Girls </p>
+</section>
+{% endblock %}
+

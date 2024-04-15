@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function showMenu() {
+            document.getElementById("navLinks").style.display = "block";
+            window.scrollBy(300, 0);
+            document.getElementByClass("fa fa-bars").style.display = "none";
+            document.getElementByClass("fa fa-times").style.display = "block";
+
+          }
+          
+          function hideMenu() {
+            document.getElementById("navLinks").style.display = "none";
+            document.getElementByClass("fa fa-bars").style.display = "block";
+            
+          }
+          
+        </script>
+    {% block head %}
+
+    {% endblock %}
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="/" style="text-decoration: none; color:White">
+                <img src="{% static 'images/GIT.jpg' %}">
+            </a>    
+            <div class="nav-links" id="navLinks">
+               <i class="fa fa-times"  onclick="hideMenu()"></i>
+               
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="about">ABOUT</a></li>
+                    <li><a href="course">COURSE</a></li>
+                    <li><a href="blog">BLOG</a></li>
+                    <li><a href="contact">CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        {% block headerdiv %}
+
+        {% endblock %}
+    
+    </section>
+
+
+    {% block body %}
+
+    {% endblock %}
+</body>
+</html>
+
+

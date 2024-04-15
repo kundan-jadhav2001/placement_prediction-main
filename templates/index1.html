@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>GIT college website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eb77bfa6eb.js" crossorigin="anonymous"></script>
+    
+{% endblock %}
+
+{% block headerdiv %}
+<div class="text-box">
+    <h1>Prediction of GIT Student Performance in Campus Placement</h1>
+    <br>
+    <a href="signinup" class="hero-btn">Sign up</a>
+</div>
+{% endblock %}
+
+{% block body %}
+<!-------- Course -------->
+
+<section class="course">
+    <h1>Courses</h1>
+    <p>Successful placements contribute significantly to resume building, making graduates more competitive in the job market.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Seminar</h3>
+            <p>A seminar is an educational event in which a group of people gather together to learn more about a certain topic or subject. Seminars usually involve presentations, discussions, and interactive activities.</p>
+        </div>
+        <div class="course-col">
+            <h3>Workshop</h3>
+            <p>College Organize Pre-Placement workshops to prepare students for logical interview and train them on Resume preparation.As a Value Addition Students are trained on Soft skill to transform them with Positive Attitude.</p>
+        </div>
+        <div class="course-col">
+            <h3>Training</h3>
+            <p>In training part, college helps students for interview, Aptitude test, Group discussion, Technical Interview and HR Interview.Some trainings provide placement offers with specific training period.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-------- campus -------->
+
+<section class="campus">
+    <h1>College Campus</h1>
+    <p>There are several companies give visits to college</p>
+    <div class="row">
+        <div class="campus-col">
+            <a href="https://www.infosys.com">
+                <img src="{% static 'images/Infosys.jpg' %}">
+                <div class="layer">
+                    <h3>INFOSYS</h3>
+                </div>
+            </a>
+        </div>
+        <div class="campus-col">
+            <a href="https://www.tcs.com">
+            <img src="{% static 'images/TCS.jpg' %}">
+            <div class="layer">
+                <h3>TCS</h3>
+            </div>
+        </a>
+        </div>
+        <div class="campus-col">
+            <a href="https://www.deloitte.com">
+            <img src="{% static 'images/Deloitte.jpg' %}">
+            <div class="layer">
+                <h3>DELOITTE</h3>
+            </div>
+        </a>
+        </div>
+        <div class="campus-col">
+            <a href="https://www.accenture.com">
+            <img src="{% static 'images/Accenture.jpg' %}">
+            <div class="layer">
+                <h3>ACCENTURE</h3>
+            </div>
+        </a>
+        </div>
+    </div>
+</section>
+
+<!--------Facilities-------->
+
+<section class="facilities">
+    <h1>Facilities</h1>
+    <p>These are the facilities provide by the college and also through this student should work on themselves for creating their own good career.</p>
+
+    <div class="row">
+        <div class="facilities-col">
+            <a href='https://www.indiabix.com'>
+            <img src="{% static 'images/Aptitude Guidance.jpg' %}">
+            </a>
+            <h3>Aptitude Guidance</h3>
+            <p>Overall easing their transition from academia to the workforce.</p>
+        </div>
+        <div class="facilities-col">
+            <a href='https://www.indiabix.com/group-discussion/topics-with-answers/'>
+            <img src="{% static 'images/gd.jpg' %}">
+            </a>
+            <h3>Group Discussion Guidance</h3>
+            <p>Overall easing their transition from academia to the workforce.</p>
+        </div>
+        <div class="facilities-col">
+            <a href='https://devfolio.co/hackathons'>
+            <img src="{% static 'images/Hackathon.jpg' %}">
+            </a>
+            <h3>Hackathon Event</h3>
+            <p>Overall easing their transition from academia to the workforce.</p>
+        </div>
+    </div>
+    
+</section>
+
+<!-- --------testimonials-------- -->
+
+<section class="testimonials">
+    <h1>Reviews</h1>
+    <p>Share your views and suggestions about this project to help in improvement.</p>
+
+    <style>
+    .testimonials{
+        width: 80%;
+        margin: auto;
+        padding-top: 100px;
+        text-align: center;
+    }
+    .testimonial-col{
+        flex-basis: 44%;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        text-align: left;
+        background: #fff3f3;
+        padding: 25px;
+        cursor: pointer;
+        display: flex;
+    }
+    .testimonial-col img{
+        height: 40px;
+        margin-left: 5px;
+        margin-right: 30px;
+        border-radius: 50%;
+    }
+    .testimonial-col p{
+        padding: 0;
+    }
+    .testimonial-col h3{
+        margin-top: 15px;
+        text-align: left;
+    }
+    .testimonial-col .fa{
+        color: #f44336;
+    }
+    @media(max-width: 700px){
+        .testimonial-col img{
+            margin-left: 0px;
+            margin-right: 15px;
+        }
+    }
+    </style>
+    
+    <div class="row">
+        <div class="testimonial-col">
+            <div>
+                <h3>Kundan Jadhav</h3>
+                <p4>kundanjadhav@gmail.com</p4>
+                <p>Overall work is nice.Keep it up!</p>
+            </div>
+        </div>
+        <div class="testimonial-col">
+            <div>
+                <h3>Sejal Shigwan</h3>
+                <p4>sejalshigwan@gmail.com</p4>
+                <p>Good!Courses suggestions are nice.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!---------- Call To Action-------- -->
+
+<section class="cta">
+    <h1>Give us your valuable feedback</h1>
+    <a href="feedback" style= "font-size: 15px" class="hero-btn">SUBMIT</a>
+
+</section>
+
+<!-------- Footer -------->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Stay in touch to know more.</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by BE Comp Girls</p>
+</section>
+{% endblock %}
+

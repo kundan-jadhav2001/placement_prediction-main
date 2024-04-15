@@ -1,0 +1,145 @@
+{% extends 'prediction/base_prediction.html' %}
+
+{% block head %}
+
+    <title>Prediction</title>
+    <style>
+        .container{
+            margin:0;
+            padding:0;
+            min-width: 100%;
+            background-image: linear-gradient(rgba(255,255,255,0.4),rgba(0,0,0,0.4)),url("../../static/images/result.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            min-height: 100vh;
+            max-height: 120vh;
+            margin:0px;
+            padding:0px;
+        }
+        .cards{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        p{
+            color:#777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+        .row{
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+        }
+        .cards-col{
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            margin-right: 5px;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transition: 0.5s;
+        }
+        h3{
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        .cards-col:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+        }
+        @media(max-width: 700px){
+            .row{
+                flex-direction:column;
+            }
+        }  
+                .result {
+                    min-height: 80vh;
+                
+            
+                }
+    </style>
+
+
+{% endblock %}
+
+{% block body %}
+    <section class="result"> 
+        <br>
+        <h2><p style="text-align: center; margin-top: 180px; color: white; font-size: 40px; ">Results:</p></h2>
+        {% if prediction == 1%}
+        <h2 style="color: Yellow;">Chances to be placed are high. Keep going. Do your Best!</h2>
+
+        
+        
+        <br> 
+        {% load static %}
+        <p style="text-align:center;"></p>
+        {% else %}
+        <h2 style="color: Red;">Chances to be placed are low. Make sure to update your skills. All the best!</h2>
+        <p style="text-align:center;"></p>
+
+        {% endif %}
+    </section>
+
+    {% if len %}
+    <section class="cards">
+        <h1 style="margin-top: 100px; ">Courses Suggestions</h1>
+        <p>Successful placements contribute significantly to resume building, making graduates more competitive in the job market.</p>
+
+        <div class="row">
+            {%if "WebDevelopment" in beginner %} 
+            <div class="cards-col">
+                <h3>Web Development</h3>
+                <p class="card-text">Use this reference to improve your Web Development skills</p>
+                <a href="https://youtu.be/z0n1aQ3IxWI?si=MpyPFlED-TZRcHaZ" class="btn btn-primary">Click here</a>
+            </div>
+            {% endif %}
+
+            {%if "DataScience" in beginner %}
+            <div class="cards-col">
+                <h3>Data Science</h3>
+                <p class="card-text">Use this reference to improve your Data Science skills</p>
+                <a href="https://youtu.be/-ETQ97mXXF0?si=NOqEX_uUY7EXoUDd" class="btn btn-primary">Click here</a>
+            </div>
+            {% endif %}
+
+            {%if "GameDevelopment" in beginner %}
+            <div class="cards-col">
+                <h3>Game Development</h3>
+                <p class="card-text">Use this reference to improve your Game Development skills</p>
+                <a href="https://youtu.be/gVDdOucyZrk?si=5H2xWPuBY_rtOeAL" class="btn btn-primary">Click here</a>
+            </div>
+            {% endif %}
+
+            {%if "AndroidDevelopment" in beginner %}
+            <div class="cards-col">
+                <h3>Android Development</h3>
+                <p class="card-text">Use this reference to improve your Android Development skills</p>
+                <a href="https://youtu.be/mXjZQX3UzOs?si=GBb89BJT8DHRXB9m" class="btn btn-primary">Click here</a>
+            </div>
+            {% endif %}
+
+            {%if "GraphicsDesigner" in beginner %}
+            <div class="cards-col">
+                <h3>Graphics Designer</h3>
+                <p class="card-text">Use this reference to improve your Graphics Designing skills</p>
+                <a href="https://youtu.be/vkSOIkNWCww?si=8MRrglUbx910Wuwp" class="btn btn-primary">Click here</a>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+    {% endif %}
+
+{% endblock %}
+

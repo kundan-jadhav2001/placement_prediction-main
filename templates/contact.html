@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>GIT college website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+<script src="https://kit.fontawesome.com/eb77bfa6eb.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block headerdiv %}
+<div class="text-box">
+    <h1>Contact Us</h1>
+</div>
+<style>
+    .contacts{
+        padding: 60px 0;
+        background: #f1f1f1;
+        color: #434343;
+        text-align: center;
+    }
+    
+    .inner{
+        max-width: 1200px;
+        margin: 30px;
+        overflow: hidden;
+        padding: 0 40px;
+    }
+    
+    .border{
+        width: 160px;
+        height: 5px;
+        background: #f44336;
+        margin: 30px auto;
+    }
+    
+    .contact-row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contact-col{
+        flex: 33.33%;
+        max-width: 33.33%;
+        box-sizing: border-box;
+    }
+    .contact{
+        background: #fff;
+        padding: 40px;
+    }
+    .contact img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .col{
+        margin-right: 20px;
+    }
+    .name{
+        font-size: 20px;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+    {% comment %} .stars{
+        color: #6ab04c;
+        margin-bottom: 20px;
+    } {% endcomment %}
+    .contact:hover{
+        box-shadow: 0 0 15px 0px rgba(0,0,0,0.2);
+    }
+    
+    @media screen and (max-width:960px) {
+    .contact-col{
+        flex: 100%;
+        max-width: 80%;
+    }  
+    }
+    
+    @media screen and (max-width:600px) {
+    .contact-col{
+        flex: 100%;
+        max-width: 100%;
+    } 
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+
+<!-------- about us content  -------->
+
+<div class="contacts">
+    <div class="inner">
+        <h1>Our Team</h1>
+        <div class="border"></div>
+
+        <div class="row">
+            <div class="col">
+               <div class="contact">
+                <img src="{% static 'images/pooja.jpg' %}" alt="">
+                <div class="name">Pooja Khanvilkar</div>
+                <!-- <div class="stars"> -->
+
+                    <p><b>Class:</b> BE Computer<br>
+                       <b>Skill:</b> Web Development<br>
+                       <b>Email:</b> poojakhanvilkar@gmail.com<br>
+                    </p>
+               </div> 
+            </div>
+            <div class="col">
+                <div class="contact">
+                 <img src="{% static 'images/janavi.jpg' %}" alt="">
+                 <div class="name">Janavi Nachare</div>
+                 <!-- <div class="stars"> -->
+ 
+                    <p><b>Class:</b> BE Computer<br>
+                       <b>Skill:</b> Data Analysis<br>
+                       <b>Email:</b> janavinachare@gmail.com<br>
+                    </p>
+                </div> 
+             </div>
+             <div class="col">
+                <div class="contact">
+                 <img src="{% static 'images/priyanka.jpg' %}" alt="">
+                 <div class="name">Priyanka Kadam</div>
+                 <!-- <div class="stars"> -->
+ 
+                    <p><b>Class:</b> BE Computer<br>
+                       <b>Skill:</b> Web Development<br>
+                       <b>Email:</b> priyankakadam@gmail.com<br>
+                    </p>
+                </div> 
+             </div>
+             <div class="col">
+                <div class="contact">
+                 <img src="{% static 'images/sima.jpg' %}" alt="">
+                 <div class="name">Sima Mhadlekar</div>
+                 <!-- <div class="stars"> -->
+ 
+                    <p><b>Class:</b> BE Computer<br>
+                       <b>Skill:</b> Web Development<br>
+                       <b>Email:</b> simamhadlekar@gmail.com<br>
+                    </p>
+                </div> 
+             </div>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
+

@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="{% static 'css/home1.css' %}" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  {% block head %} 
+  
+  {% endblock %}
+</head>
+<body>
+    <div class="container" style="text-align: center; align-items: center;">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                {% comment %} <ul class="navbar-nav mr-auto">
+                    <!-- <li class="nav-item active"><a class="nav-link" href="logout"><span class="sr-only" style="font-weight:800">Logout</span></a></li> -->
+                    <li class="nav-item"> {% endcomment %}
+                        <a href="predictionpage" style=" text-decoration: none; font-size: 20px; ">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Predict Placement
+                        </a>
+                    {% comment %} </li>
+                    <li class="nav-item"> {% endcomment %}
+                        <a href="report" style="text-decoration: none; margin-left: 25%; font-size: 20px;    ">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Data and Records
+                        </a>
+                        <a href="logout" style="text-decoration: none; margin-left: 24%; font-size: 20px; height:90px;   ">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Logout
+                        </a>
+                    {% comment %} </li>
+                </ul> {% endcomment %}
+            </div>
+        </nav>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        {% block body %}
+
+        {% endblock %}
+    
+    </div>
+  
+</body>
+</html>
+

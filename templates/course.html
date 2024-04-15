@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block head %}
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>GIT college website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+<script src="https://kit.fontawesome.com/eb77bfa6eb.js" crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block headerdiv %}
+<div class="text-box">
+    <h1>Our Courses</h1>
+</div>
+{% endblock %}
+
+{% block body %}
+<!-------- course  -------->
+
+<section class="course">
+    <h1>Courses</h1>
+    <p>Successful placements contribute significantly to resume building, making graduates more competitive in the job market.</p>
+
+    <div class="row">
+        <div class="course-col">
+            <h3>Seminar</h3>
+            <p>A seminar is an educational event in which a group of people gather together to learn more about a certain topic or subject. Seminars usually involve presentations, discussions, and interactive activities.</p>
+        </div>
+        <div class="course-col">
+            <h3>Workshop</h3>
+            <p>College Organize Pre-Placement workshops to prepare students for logical interview and train them on Resume preparation.As a Value Addition Students are trained on Soft skill to transform them with Positive Attitude.</p>
+        </div>
+        <div class="course-col">
+            <h3>Training</h3>
+            <p>In training part, college helps students for interview, Aptitude test, Group discussion, Technical Interview and HR Interview.Some trainings provide placement offers with specific training period.</p>
+        </div>
+    </div>
+
+    
+</section>
+
+
+
+<!-------- Footer-------->
+<section class="footer">
+    <h4>About Us</h4>
+    <p>Overall easing their transition from academia to the workforce.</p>
+    <div class="icons">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-linkedin"></i>
+    </div>
+    <p>Made with <i class="fa fa-heart-o"></i> by BE Comp Girls </p>
+</section>
+
+
+{% endblock %}

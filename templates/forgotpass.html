@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP</title>
+    <link rel="stylesheet" href="{% static 'css/emailotp.css' %}">
+    <script>
+        document.getElementById("email").setAttribute({{mail}});
+    </script>
+
+</head>
+<body>
+    <form action="forgotpass" method="POST">{% csrf_token %}
+        <div class="form">
+            <h1>OTP</h1>
+            <input name="email" type="email" id="email" placeholder="Enter Email...">
+            <button class="btn" type=submit>SEND OTP</button>
+        </form>
+        <form action="forgotpass" method="POST">{% csrf_token %}
+            <div class="otpverify">
+                <input name="otp" type="text" id="otp_inp" placeholder="Enter the OTP sent to your Email...">
+                <button class="btn" id="otp-btn" type=submit>Verify</button>
+            </div>  
+        </div>
+    </form>
+</body>
+</html>

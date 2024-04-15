@@ -1,0 +1,33 @@
+{% load static %}
+
+{% block head %}
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>GIT college website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eb77bfa6eb.js" crossorigin="anonymous"></script>
+    
+{% endblock %}
+
+{% block body %}
+
+
+<section class="testimonials">
+    <h1>Reviews</h1>
+    <p>Share your views and suggestions about this project to help in improvement.</p>
+    {% for i in data %}
+    <div class="row" style="align-items: center;">
+        <div class="testimonial-col" style="align-items: center;">
+            <div>
+                <h3>{{i.Name}}</h3>
+                <p4>{{i.Email}}</p4>
+                <p>{{i.Opinions}}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+{% endblock %}
+
